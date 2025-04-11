@@ -52,4 +52,4 @@ urllib3==2.3.0
 watchdog==6.0.0
 groq
 python-dotenv
-gensim==4.3.3
+gensim
