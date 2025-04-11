@@ -331,7 +331,7 @@ def analyze_job_description(job_description, groq_client):
     try:
         response = groq_client.chat.completions.create(
             messages=messages,
-            model="llama-3.3-70b-versatile",
+            model="llama-3.1-8b-instant",
             temperature=0.1,
             max_tokens=1000,
             response_format={"type": "json_object"}
@@ -401,7 +401,7 @@ def analyze_resume_content(resume_text, job_requirements, groq_client):
     try:
         response = groq_client.chat.completions.create(
             messages=messages,
-            model="llama-3.3-70b-versatile",
+            model="llama-3.1-8b-instant",
             temperature=0.1,
             max_tokens=1500,
             response_format={"type": "json_object"}
@@ -505,7 +505,7 @@ def calculate_certification_value(certifications, preferred_qualifications):
 # GROQ API integration for resume analysis
 def analyze_resume_fit(resume_text, job_description):
     """
-    Use Groq API with Llama-3.3-70B-Versatile to analyze how well the resume fits the job description.
+    Use Groq API with llama-3.1-8b-instant to analyze how well the resume fits the job description.
     """
     try:
         # Initialize Groq client
@@ -545,7 +545,7 @@ Ensure the scores are realistic evaluations from 0-10 based on how well the resu
         # Make API request
         response = groq_client.chat.completions.create(
             messages=messages,
-            model="llama-3.3-70b-versatile",
+            model="llama-3.1-8b-instant",
             temperature=0.2,
             max_tokens=1000,
             response_format={"type": "json_object"}
